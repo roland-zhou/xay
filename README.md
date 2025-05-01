@@ -4,9 +4,33 @@
 
 ## Installation
 
-1. Make sure you have Go 1.21 or later installed
-2. Clone this repository
-3. Run `go install` in the project directory
+You can install `xay` in one of two ways:
+
+1. Direct installation (recommended):
+```bash
+go install github.com/roland-zhou/xay@latest
+```
+
+2. Manual installation:
+   1. Make sure you have Go 1.21 or later installed
+   2. Clone this repository
+   3. Run `go install` in the project directory
+
+After installation, make sure the Go binary directory is in your PATH. You can add it by running:
+
+```bash
+# For macOS/Linux
+echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.zshrc  # or ~/.bashrc
+source ~/.zshrc  # or ~/.bashrc
+
+# For Windows (PowerShell)
+$env:Path += ";$(go env GOPATH)\bin"
+```
+
+You can verify the installation by running:
+```bash
+xay hello
+```
 
 ## Configuration
 
